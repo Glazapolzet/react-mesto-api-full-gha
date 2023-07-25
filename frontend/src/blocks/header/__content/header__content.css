@@ -1,0 +1,12 @@
+.header__content {
+  position: relative;
+  top: 6px;
+  margin-left: auto;
+  display: flex;
+}
+
+@media screen and (max-width: 924px) {
+  .header__content {
+    margin-right: 30px;
+  }
+}

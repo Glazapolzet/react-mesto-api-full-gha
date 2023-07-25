@@ -1,0 +1,16 @@
+.header__mobile-content_visible {
+  display: flex;
+  width: 100%;
+  min-height: 142px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 18px;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+}
+
+@media screen and (min-width: 767px) {
+  .header__mobile-content_visible {
+    display: none;
+  }
+}

@@ -1,0 +1,11 @@
+.entry__link {
+  margin: 15px 0 0;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  text-decoration: none;
+}

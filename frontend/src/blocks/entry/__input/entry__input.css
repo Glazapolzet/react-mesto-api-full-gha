@@ -1,0 +1,24 @@
+.entry__input {
+  padding: 0 0 13px;
+  width: 100%;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  color: #fff;
+}
+
+.entry__input::placeholder {
+  color: #ccc;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.entry__input:focus {
+  outline: none;
+}

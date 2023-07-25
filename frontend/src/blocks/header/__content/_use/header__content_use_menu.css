@@ -1,0 +1,9 @@
+.header__content_use_menu {
+  column-gap: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .header__content_use_menu {
+    display: none;
+  }
+}

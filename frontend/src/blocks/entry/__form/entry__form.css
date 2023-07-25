@@ -1,0 +1,10 @@
+.entry__form {
+  margin: 50px 0 0;
+  width: 358px;
+}
+
+@media screen and (max-width: 418px) {
+  .entry__form {
+    width: 260px;
+  }
+}

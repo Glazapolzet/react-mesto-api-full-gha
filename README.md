@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.109.98
+IP 158.160.109.98
 
 Frontend https://vypz.praktikum.nomoredomains.xyz
 

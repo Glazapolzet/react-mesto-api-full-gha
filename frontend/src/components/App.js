@@ -39,27 +39,23 @@ export default function App() {
   const [authMessage, setAuthMessage] = useState("");
 
   useEffect(() => {
-    const isAuthorized = localStorage.getItem('isAuth');
+    auth.getUser()
+      .then((res) => {
+        if (!res) {
+          return;
+        }
 
-    if (isAuthorized) {
-      auth.getUser()
-        .then((res) => {
-          if (!res) {
-            return;
-          }
-
-          getContent()
-            .then((r) => {
-              setEmail(res['email']);
-              setLoggedIn(true);
-              navigate('/', {replace: true});
-            })
-            .catch((err) => console.log(err));
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
+        getContent()
+          .then((r) => {
+            setEmail(res['email']);
+            setLoggedIn(true);
+            navigate('/', {replace: true});
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [])
 
   function getContent () {
@@ -150,8 +146,6 @@ export default function App() {
   function handleLogin (email, password) {
     return auth.authorize(email, password)
       .then((res) => {
-        localStorage.setItem('isAuth', 'true');
-
         getContent()
           .then((r) => {
             setLoggedIn(true);
@@ -171,7 +165,6 @@ export default function App() {
 
   function handleSignOut (evt) {
     evt.preventDefault();
-    localStorage.removeItem('isAuth');
 
     auth.signout()
       .then((r) => {
